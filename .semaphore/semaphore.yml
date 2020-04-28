@@ -21,6 +21,8 @@ blocks:
           commands:
             - bundle exec xcversion select 11.2.1
             - bundle exec fastlane test
+      secrets:
+        - name: match-secrets
   - name: Build app
     task:
       env_vars:
