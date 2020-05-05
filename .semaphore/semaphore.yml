@@ -30,6 +30,8 @@ blocks:
           value: en_US.UTF-8
       prologue:
         commands:
+	  - chmod 0600 ~/.ssh/id_rsa_semaphoreci.pub
+          - ssh-add ~/.ssh/id_rsa_semaphoreci.pub	
           - checkout
           - cache restore
           - bundle install --path vendor/bundle
